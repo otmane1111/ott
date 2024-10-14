@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appMain">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="Wed, 04 Jan 2017 13:00:00 GMT">
+
+    <title>Almahive</title>
+
+    <!--Import Google Icon Font-->
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+
+    <style>
+        .login-form-container, .signup-form-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .login-form-container form, .signup-form-container form {
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Gestion du formulaire de connexion
+            document.getElementById("login-btn").addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(".login-form-container").style.display = "flex";
+            });
+
+            document.getElementById("close-login-form").addEventListener("click", function () {
+                document.querySelector(".login-form-container").style.display = "none";
+            });
+
+            // Gestion du formulaire d'inscription
+            document.getElementById("signup-btn").addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(".signup-form-container").style.display = "flex";
+            });
+
+            document.getElementById("close-signup-form").addEventListener("click", function () {
+                document.querySelector(".signup-form-container").style.display = "none";
+            });
+        });
+    </script>
+    
+    
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="img/assets/Logo_Logo%20copy%203.png" alt="" height="50px"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="signup.html">Sign up</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="#" id="login-btn">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-8">
+                        <div class="headline_talk">
+                            <h1>Alumni mohammed V university .</h1>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-8 col-md-8">
+                                    <p>Our application helps you hold an updateable database of your alumni network effortlessly.</p>
+                                    <a href="signup.html">
+                                        <button class="btn btn-success" id="signup-btn">Get started</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-hidden col-sm-4 col-md-4">
+                        <div class="headline_photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <h2>An enriched database that is always up-to-date</h2>
+                    <p>Track and control up-to-date and relevant data of your alumni. Whenever a change is made to their LinkedIn accounts, it automatically reflects on your database</p>
+                </div>
+                <div class="col-xs-hidden col-sm-6 col-md-6">
+                    <div class="map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how_it_works" style="background-color: #FAFAFA;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 land_write">
+                    <h2>Everything you will need in one platform.</h2>
+                    <p>Foster collaboration and create a space where UM5 students and alumni can interact with revolutionary ideas. Join us as we bridge the gap between local talent and international innovation</p>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="feat">
+                        <div class="svg svg_persona">
+                        </div>
+                        <h3>Personalization</h3>
+                        <p>Directly edit personal information from a profile dashboard</p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="feat">
+                        <div class="svg svg_integra">
+                        </div>
+                        <h3>Easy integration</h3>
+                        <p>Feed your profile with information from your social media accounts.</p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="feat">
+                        <div class="svg svg_interface">
+                        </div>
+                        <h3>Human Interface</h3>
+                        <p>Complete your goals with our intuitive and user-friendly interface</p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="feat">
+                        <div class="svg svg_security">
+                        </div>
+                        <h3>Security</h3>
+                        <p>SSL certificate and password hashing are used to secure a user's data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="row" style="text-align: center;">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <h2>Connect. Network. Join</h2>
+                    <p>Foster collaboration and create a space where UM5 students and alumni can interact with revolutionary ideas. Join us as we bridge the gap between local talent and international innovation</p>
+                    <a href="signup.html">
+                        <button class="btn btn-success" style="margin-top: 15px; width: 183px; height: 50px; font-size: 15px; text-transform: uppercase;" id="signup-btn">Get started</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #FAFAFA;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <a class="navbar-brand" href="#"><img src="img/assets/Logo_Logo%20copy%203.png" alt="" height="50px"></a>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <h3>Contact</h3>
+                    <p>+212708780571</p>
+                    <p>otmane_rbati@um5.ac.ma</p>
+
+                </div>
+                <!-- <div class="col-xs-6 col-sm-3 col-md-3">
+                    <h3>Programme</h3>
+                    <p>cle-informatique</p>
+                </div> -->
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <h3>Department</h3>
+                    <p>informatique</p>
+                </div>
+                <!-- Ajoutez ceci à l'endroit où vous souhaitez afficher le lien LinkedIn -->
+               <!-- Ajoutez ceci à l'endroit où vous souhaitez afficher les liens en colonnes -->
+                <div class="social-links">
+                    <h3>réseaux sociaux</h3>
+                    <a href="https://www.linkedin.com/in/otmane-rbati-a637a323a/" target="_blank">LinkedIn</a>
+                    <a href="https://www.instagram.com/otmane_rbati/" target="_blank">Instagram</a>
+                    <a href="https://twitter.com/otmane_rbati" target="_blank">Twitter</a>
+                </div>
+
+                <div class="col-md-12" style="text-align: center; margin-top: 25px; color: #09a5db; font-size: 15px;">
+                    Designed and developed by otmane rbati, ens rabat student. 2024.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Gestion du formulaire de connexion
+        document.getElementById("login-btn").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(".login-form-container").style.display = "flex";
+        });
+
+        document.getElementById("close-login-form").addEventListener("click", function () {
+            document.querySelector(".login-form-container").style.display = "none";
+        });
+
+        document.getElementById("loginFormContainer").addEventListener("submit", function (e) {
+            e.preventDefault();
+            // Ajoutez ici votre logique de vérification des informations de connexion
+
+            // Redirigez vers la page de profil si la connexion est réussie
+            window.location.href = "profile.html";
+        });
+    });
+</script> -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Gestion du formulaire de connexion
+        document.getElementById("login-btn").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(".login-form-container").style.display = "flex";
+        });
+
+        document.getElementById("close-login-form").addEventListener("click", function () {
+            document.querySelector(".login-form-container").style.display = "none";
+        });
+
+        document.getElementById("loginFormContainer").addEventListener("submit", function (e) {
+            e.preventDefault();
+            // Ajoutez ici votre logique de vérification des informations de connexion
+
+            // Redirigez vers la page de profil si la connexion est réussie
+            window.location.href = "profile.html";
+
+        });
+        document.getElementById("signup-btn").addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(".signup-form-container").style.display = "flex";
+            });
+
+            document.getElementById("close-signup-form").addEventListener("click", function () {
+                document.querySelector(".signup-form-container").style.display = "none";
+            });
+
+            document.getElementById("signupFormContainer").addEventListener("submit", function (e) {
+                e.preventDefault();
+                // Ajoutez ici votre logique de traitement du formulaire d'inscription
+
+                // Fermez le formulaire d'inscription après un traitement réussi
+                document.querySelector(".signup-form-container").style.display = "none";
+            });
+    });
+</script>
+</head>
+
+<body>
+<!-- Votre contenu HTML existant reste inchangé -->
+
+<!-- Formulaire de connexion -->
+<div class="login-form-container" id="loginFormContainer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form class="login-form">
+                    <h2>Alumni Login</h2>
+                    <span style="padding: 15px;"></span>
+                    <input type="text" placeholder="username" name="username">
+                    <input type="password" placeholder="password" name="password">
+                    <button>Login</button>
+                    <p class="message"><a href="#" id="close-login-form" class="toggle">Close</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Formulaire de connexion
+    <div class="login-form-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <form class="login-form">
+                        <h2>Alumni Login</h2>
+                        <span style="padding: 15px;"></span>
+                        <input type="text" placeholder="username" name="username">
+                        <input type="password" placeholder="password" name="password">
+                        <button>Login</button>
+                        <p class="message"><a href="#" id="close-login-form" class="toggle">Close</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Formulaire d'inscription -->
+    <div class="signup-form-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <form class="signup-form">
+                        <h2>Alumni Sign Up</h2>
+                        <span style="padding: 15px;"></span>
+                        <input type="text" placeholder="username" name="username">
+                        <input type="password" placeholder="password" name="password">
+                        <!-- Ajoutez ici d'autres champs du formulaire d'inscription -->
+                        <button>Sign Up</button>
+                        <p class="message"><a href="#" id="close-signup-form" class="toggle">Close</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
